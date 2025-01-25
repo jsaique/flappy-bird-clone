@@ -10,7 +10,7 @@ class GameStartMessage(pygame.sprite.Sprite):
         self._layer = Layer.UI
         self.image = assets.get_sprites("message")
         self.rect = self.image.get_rect(
-            topleft=(configs.SCREEN_WIDTH / 2, configs.SCREEN_HEIGHT / 2)
+            center=(configs.SCREEN_WIDTH / 2, configs.SCREEN_HEIGHT / 2)
         )
         self.mask = pygame.mask.from_surface(self.image)
         super().__init__(*groups)
