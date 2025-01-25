@@ -12,6 +12,7 @@ class Floor(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(
             bottomleft=(configs.SCREEN_WIDTH * index, configs.SCREEN_HEIGHT)
         )
+        self.mask = pygame.mask.from_surface(self.image)
         super().__init__(*groups)
 
     def update(self):
